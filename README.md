@@ -1,1 +1,1 @@
-[bitcoinqrcode.org](http://bitcoinqrcode.org)
+Fork of [bitcoinqrcode.org](http://bitcoinqrcode.org)
