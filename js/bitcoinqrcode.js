@@ -105,46 +105,46 @@
 		});
 	};
 
-	App.prototype.imgur = function(canvas) {
-		var
-			image
-			spinner = $('<div class="spinner">');
+//	App.prototype.imgur = function(canvas) {
+//		var
+//			image
+//			spinner = $('<div class="spinner">');
+//
+//		spinner.appendTo($(canvas).parent());
+//
+//		try {
+//			var image = canvas.toDataURL('image/png').split(',')[1];
+//		} catch(e) {
+//			var image = canvas.toDataURL().split(',')[1];
+//		}
+//
+//		$.ajax({
+//			url: 'https://api.imgur.com/3/image',
+//			type: 'POST',
+//			headers: {
+//				'Authorization': 'Client-ID ' + IMGUR_CLIENT_ID
+//			},
+//			data: {
+//				type: 'base64',
+//				title: this.address,
+//				description: 'Bitcoin Cash QR Code Generator',
+//				image: image
+//			},
+//			dataType: 'json'
+//		})
+//		.success(function(data) {
+//			spinner.hide();
+//
+//			link = $('<div class="link"><input type="text" value="' + data.data.link + '"></div>');
+//
+//			link.appendTo($(canvas).parent());
+//		})
+//		.error(function() {
+//			spinner.hide();
 
-		spinner.appendTo($(canvas).parent());
-
-		try {
-			var image = canvas.toDataURL('image/png').split(',')[1];
-		} catch(e) {
-			var image = canvas.toDataURL().split(',')[1];
-		}
-
-		$.ajax({
-			url: 'https://api.imgur.com/3/image',
-			type: 'POST',
-			headers: {
-				'Authorization': 'Client-ID ' + IMGUR_CLIENT_ID
-			},
-			data: {
-				type: 'base64',
-				title: this.address,
-				description: 'Bitcoin Cash QR Code Generator',
-				image: image
-			},
-			dataType: 'json'
-		})
-		.success(function(data) {
-			spinner.hide();
-
-			link = $('<div class="link"><input type="text" value="' + data.data.link + '"></div>');
-
-			link.appendTo($(canvas).parent());
-		})
-		.error(function() {
-			spinner.hide();
-
-			alert('Sorry, the image could not be uploaded. We probably hit Imgur\'s upload limit.\n\nYou can still download the image and upload it yourself.');
-		});
-	}
+//			alert('Sorry, the image could not be uploaded. We probably hit Imgur\'s upload limit.\n\nYou can still download the image and upload it yourself.');
+//		});
+//	}
 
 	$(function() {
 		app = new App();
