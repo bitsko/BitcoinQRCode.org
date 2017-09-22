@@ -1,1 +1,1 @@
-var IMGUR_CLIENT_ID = '58157d9613eb08a';
+var IMGUR_CLIENT_ID = 'd70d5cc41bf7c23';
